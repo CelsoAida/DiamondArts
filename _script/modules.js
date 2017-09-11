@@ -19,7 +19,12 @@ function HasClass(elem, clsname) {
 
 // addEventListener
 function AddEvnt(elem, evt, callback) {
-	this.elem = elem
+	if(typeof(elem) === 'string')
+		this.elem = Select(elem)
+	else
+		this.elem = elem
+
+	
 	this.evt = evt
 	this.call = callback
 
@@ -44,4 +49,42 @@ function Select(elem, opt) {
 
 
 	return elems
+}
+
+// Creating an Element
+function CreateElem(elem) {
+	this.elem = elem
+	var element = document.createElement(this.elem)
+	return element
+}
+
+// Append an element to another element
+function AppendElem(child, parent) {
+	parent.appendChild(child)
+}
+
+// create an element and append it to another
+function CreateAndAppend(child, parent, callback) {
+	// create an element here
+	this.child = CreateElem(child);
+
+	// checks if argument passed to parent parameter is a string
+	if(typeof(parant) === 'string') {
+		// if argument is a string then select it
+		// this allows css selectors in the parent parameter
+		this.parent = Select(parent);
+	} else if(!parent) {
+		console.log('error parent argument not defined')
+		return
+	} else {
+		// if argument passed to parent parameter is a DOM Element
+		// assign it to this.parent
+		this.parent = parent;
+	}
+
+	this.parent.appendChild(this.child)
+
+	// callback function allows for you to manipulate the 
+	// the element that was created
+	callback(this.child)
 }

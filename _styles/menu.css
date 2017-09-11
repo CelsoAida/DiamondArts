@@ -1,0 +1,139 @@
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style-type: none;
+	font-family: abeezee, comfortaa arial, sans-serif;
+	font-size: 14px;
+}
+
+
+
+a {
+	color: #fff;
+}
+
+body, html {
+	width: 100vw;
+	height: 100vh;
+}
+
+body {
+	overflow: hidden;
+	background-color: #222;
+}
+
+.wrapper {
+	width: 100vw;
+	height: 100vw;
+	overflow: hidden;
+	background-color: transparent;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+/*== navbar section ==*/
+.navbar {
+	position: absolute;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	width: 40px;
+	height: 100vh;
+	background-color: rgba(0,0,0,0.5);
+}
+
+.navbar .icons {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.navbar .icons ul li, .navbar .icons ul li a {
+	position: relative;
+	display: block;
+	width: 20px;
+	height: 20px;
+	margin: 30px auto;
+}
+
+.navbar .icons ul li a img {
+	width: 20px;
+	height: 20px;
+	filter: brightness(0.3);
+	-webkit-transition: all 0.8s ease-in-out;
+	-moz-transition: all 0.8s ease-in-out;
+	-ms-transition: all 0.8s ease-in-out;
+	-o-transition: all 0.8s ease-in-out;
+	transition: all 0.8s ease-in-out;
+}
+
+.navbar .icons ul li.active a img, .navbar .icons ul li a img:hover {
+	width: 20px;
+	height: 20px;
+	filter: brightness(1);
+	-webkit-transition: all 0.8s ease-in-out;
+	-moz-transition: all 0.8s ease-in-out;
+	-ms-transition: all 0.8s ease-in-out;
+	-o-transition: all 0.8s ease-in-out;
+	transition: all 0.8s ease-in-out;
+}
+
+.navbar .icons ul li:before {
+	content: "";
+	position: absolute;
+	left: calc(100% + 20px);
+	top: 50%;
+	transform: translateY(-50%);
+	color: rgba(250,250,250,0.5);
+	opacity: 0;
+	transition: all 0.5s ease-in-out;
+}
+
+.navbar .icons ul li:after {
+	content: "";
+	position: absolute;
+	left: calc(100% + 10px);
+	top: 50%;
+	transform: translateY(-50%);
+	color: #f0f0f0;
+	width: 0px;
+	height: 1px;
+	background-color: rgba(250,250,250,0.3);
+	opacity: 0;
+	transition: all 0.5s ease-in-out;
+}
+
+.navbar .icons ul li.anim:after {
+	opacity: 1;
+	width: 20px
+}
+
+.navbar .icons ul li.anim:before {
+	opacity: 1;
+	left: calc(100% + 35px);
+	transition: all 0.3s 0.2s ease-in-out;
+}
+
+
+.navbar .icons ul li.anim:nth-child(1):before {
+	content: "Home";
+}
+
+.navbar .icons ul li:nth-child(2):before {
+	content: "About";
+}
+
+.navbar .icons ul li:nth-child(3):before {
+	content: "Portfolio";
+}
+
+.navbar .icons ul li:nth-child(4):before {
+	content: "Services";
+}
+
+.navbar .icons ul li:nth-child(5):before {
+	content: "Contact";
+}

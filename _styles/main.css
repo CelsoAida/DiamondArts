@@ -1,125 +1,3 @@
-* {
-	margin: 0;
-	padding: 0;
-	text-decoration: none;
-	list-style-type: none;
-	font-family: abeezee, comfortaa arial, sans-serif;
-	font-size: 14px;
-}
-
-a {
-	color: #fff;
-}
-
-body, html {
-	width: 100vw;
-	height: 100vh;
-}
-
-body {
-	overflow: hidden;
-	background-color: #222;
-}
-
-.wrapper {
-	width: 100vw;
-	height: 100vw;
-	overflow: hidden;
-	background-color: transparent;
-	position: relative;
-	top: 0;
-	left: 0;
-}
-
-/*== navbar section ==*/
-.navbar {
-	position: absolute;
-	z-index: 100;
-	top: 0;
-	left: 0;
-	width: 40px;
-	height: 100vh;
-	background-color: rgba(0,0,0,0.5);
-}
-
-.navbar .icons {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-}
-
-.navbar .icons ul li, .navbar .icons ul li a {
-	position: relative;
-	display: block;
-	width: 20px;
-	height: 20px;
-	margin: 30px auto;
-}
-
-.navbar .icons ul li a img {
-	width: 20px;
-	height: 20px;
-	
-}
-
-.navbar .icons ul li:before {
-	content: "";
-	position: absolute;
-	left: calc(100% + 20px);
-	top: 50%;
-	transform: translateY(-50%);
-	color: rgba(250,250,250,0.5);
-	opacity: 0;
-	transition: all 0.5s ease-in-out;
-}
-
-.navbar .icons ul li:after {
-	content: "";
-	position: absolute;
-	left: calc(100% + 10px);
-	top: 50%;
-	transform: translateY(-50%);
-	color: #f0f0f0;
-	width: 0px;
-	height: 1px;
-	background-color: rgba(250,250,250,0.3);
-	opacity: 0;
-	transition: all 0.5s ease-in-out;
-}
-
-.navbar .icons ul li.active:after {
-	opacity: 1;
-	width: 20px
-}
-
-.navbar .icons ul li.active:before {
-	opacity: 1;
-	left: calc(100% + 35px);
-	transition: all 0.3s 0.2s ease-in-out;
-}
-
-
-.navbar .icons ul li.active:nth-child(1):before {
-	content: "Home";
-}
-
-.navbar .icons ul li:nth-child(2):before {
-	content: "About";
-}
-
-.navbar .icons ul li:nth-child(3):before {
-	content: "Portfolio";
-}
-
-.navbar .icons ul li:nth-child(4):before {
-	content: "Services";
-}
-
-.navbar .icons ul li:nth-child(5):before {
-	content: "Contact";
-}
-
 /*== Homepage Styles ==*/
 .home {
 	position: absolute;
@@ -143,74 +21,12 @@ body {
 	left: 40px;
 }
 
-
-
-.navigate, .welcome {
+.welcome {
 	display: none;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-}
-
-.navigate a {
-	display: block;
-	opacity: 0;
-	float: left;
-	margin: 5px 0;
-	text-transform: uppercase;
-	color: rgba(255,255,255,0.3);
-	transition: all 0.5s ease-in-out;
-}
-
-.navigate a:hover {
-	color: rgba(255,255,255, 1);
-}
-
-.navigate a:nth-child(1) {
-	font-size: 100px;
-}
-
-.navigate a:nth-child(2) {
-	font-size: 60px;
-	margin: 15px 30px;
-}
-
-.navigate a:nth-child(3) {
-	font-size: 30px;
-	margin: 20px 0px;
-}
-
-.navigate a:nth-child(4) {
-	clear: left;
-	float: left;
-	font-size: 100px;
-	margin: 40px 15px 0 15px;
-	line-height: 20px;
-}
-
-.navigate a:nth-child(5) {
-	font-size: 120px;
-	margin: -60px 15px 0 380px;
-	line-height: 70px;
-}
-
-.navigate a:nth-child(6) {
-	font-size: 60px;
-	margin: -30px 15px 0 15px;
-	line-height: 70px;
-}
-
-.navigate a:nth-child(7) {
-	font-size: 30px;
-	margin: 10px 15px 0 15px;
-	line-height: 70px;
-}
-
-.navigate a:nth-child(8) {
-	font-size: 30px;
-	margin: 10px 15px 0 15px;
-	line-height: 70px;
 }
 
 .welcome {
@@ -230,9 +46,11 @@ body {
 	text-align: center;
 	float: left;
 	margin: 2px 5px;
-	-webkit-animation: shows 3s ease-in-out forwards;
-	-o-animation: shows 3s ease-in-out forwards;
-	animation: shows 3s ease-in-out forwards;
+	-webkit-animation: popup 0.8s ease-in-out forwards;
+	-moz-animation: popup 0.8s ease-in-out forwards;
+	-ms-animation: popup 0.8s ease-in-out forwards;
+	-o-animation: popup 0.8s ease-in-out forwards;
+	animation: popup 0.8s ease-in-out forwards;
 }
 
 .welcome a {
