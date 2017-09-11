@@ -1,15 +1,15 @@
 // Menu effects
 function menu(){
-	var li = document.querySelectorAll('.icons ul li');
+	var li = Select('.icons ul li', true);
 	var cName = 'active' //class name
 
 	for(var i=0; i<li.length; i++) {
-		li[i].addEventListener('mouseenter', clas)
-		li[i].addEventListener('mouseleave', clas)
+		AddEvnt(li[i], 'mouseenter', clas)
+		AddEvnt(li[i], 'mouseleave', clas)
 	}
 
 	function clas() {
-		var chec = hasClass(this, cName)
+		var chec = HasClass(this, cName)
 		if(chec)
 			this.classList.remove(cName)
 		else
@@ -18,30 +18,12 @@ function menu(){
 };
 
 
-// chec if a class is present
-function hasClass(elem, clsname) {
-	this.elem = elem
-	this.clas = clsname
-
-	if(this.elem.classList.length === 0) {
-		return false;
-	}
-
-	for(var i=0; i<this.elem.classList.length; i++) {
-		if(this.elem.classList[i] === this.clas)
-			return true
-		else
-			continue
-			return false
-	}
-}
-
 // import text to welcome message
 function wlmsg(){
 	var dat = info.welcome,
 		regex = /\W+[. \, ! @]/ig,
 		words = dat.split(regex),
-		msg = document.querySelector('.message'),
+		msg = Select('.message'),
 		interval, count = 0, end = words.length;
 
 	function makeElements() {
@@ -54,7 +36,7 @@ function wlmsg(){
 
 			if(count >= end) {
 				clearInterval(interval, 100)
-				var btn = document.querySelector('.welcome a')
+				var btn = Select('.welcome a')
 				setTimeout(function(){
 					btn.style.display = 'block'
 					setTimeout(function(){
@@ -72,56 +54,34 @@ function wlmsg(){
 
 // show home page
 function hme(){
-	var btn = document.querySelector('.welcome a')
-	var welcm = document.querySelector('.welcome')
-	var home = document.querySelector('.navigate')
+	var btn = Select('.welcome a')
+	var welcm = Select('.welcome')
+	var home = Select('.navigate')
 
-	btn.addEventListener('click', showHome)
+	AddEvnt(btn, 'click', showHome)
 
 	function showHome() {
 		welcm.style.display = 'none';
 		home.style.display = 'block';
+		homeNavigationAnim()
 	}
 };
 
-var delta = {
-	val: null,
+function homeNavigationAnim() {
+	var elems = Select('.navigate a', true)
+	for(var i=0; i<elems.length; i++) {
+		var delay = Math.random()*2;
+		elems[i].style.webkitAnimation = 'popup 0.8s ' + delay + 's ease-in-out forwards'
+		elems[i].style.mozAnimation = 'popup 0.8s ' + delay + 's ease-in-out forwards'
+		elems[i].style.msAnimation = 'popup 0.8s ' + delay + 's ease-in-out forwards'
+		elems[i].style.OAnimation = 'popup 0.8s ' + delay + 's ease-in-out forwards'
+		elems[i].style.animation = 'popup 0.8s ' + delay + 's ease-in-out forwards'
+		console.log(delay)
+	}
 }
-var init = 0;
 
-window.addEventListener('load', function(e){
+AddEvnt(window, 'load', function(e){
 	menu();
 	wlmsg();
-	hme();
-	
+	hme();	
 })
-
-
-
-addEventListener('wheel', function(e){
-	delta.val = e.wheelDeltaY || e.deltaY;
-	cnt();
-})
-
-function cnt() {
-	if(delta.val < 0) {
-		console.log('delta is negative: ' + delta.val)
-		init--
-		ch()
-	} else {
-		console.log('delta is positive: ' + delta.val)
-		init++
-		ch()
-	}
-
-	function ch(){
-		if(init > 5) {
-			init = 0
-		} else if(init < 0) {
-			init = 5
-		}
-	}
-	
-
-	console.log("delta: " + delta.val)
-}

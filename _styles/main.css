@@ -155,6 +155,7 @@ body {
 
 .navigate a {
 	display: block;
+	opacity: 0;
 	float: left;
 	margin: 5px 0;
 	text-transform: uppercase;
