@@ -69,9 +69,7 @@ function activeClass(framentID) {
 		} else {
 			active[i].classList.remove('active')
 		}
-	}
-
-	
+	}	
 }
 
 

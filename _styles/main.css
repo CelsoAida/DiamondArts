@@ -1,5 +1,5 @@
 /*== Homepage Styles ==*/
-.home {
+.home, .about {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -81,4 +81,9 @@
 	border: 1px solid #fff;
 	background-color: rgba(255,255,255, 0.05);
 	opacity: 1;
+}
+
+
+.about {
+	background-image: url("https://static.pexels.com/photos/6482/black-and-white-man-person-hands.jpg");
 }
