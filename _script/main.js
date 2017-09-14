@@ -58,6 +58,8 @@ AddEvnt(window, 'load', function(e){
 	aboutSpanAnim();
 	menu();
 	wlmsg();
+	skilClick()
+	skillsOnLoad()
 })
 
 
@@ -134,6 +136,7 @@ AddEvnt(buttons[1], 'click', function(){
 	p.remove();
 	about();
 	aboutSpanAnim();
+	skillsOnLoad()
 })
 
 function aboutSpanAnim() {
@@ -151,4 +154,39 @@ function aboutSpanAnim() {
 		span[i].style.OAnimation = info.animName[index] + ' ' + dur + 's ease-in-out ' + delay + 's forwards';
 		span[i].style.animation = info.animName[index] + ' ' + dur + 's ease-in-out ' + delay + 's forwards';
 	}
+}
+
+function skillsOnLoad() {
+	var skill = info.skills,
+		div = Select('.skill_info p'),
+		rate = Select('.usage_thumb')	
+
+		div.innerHTML = 'Skill: ' + skill[0].name + '<br \
+		/>' + 'Version: ' + skill[0].version + '<br />'
+		setTimeout(function(){
+			rate.style.width = skill[0].percent;
+		}, 1000)
+		
+}
+
+
+function skilClick() {
+	var btn = Select('.skills img', true),
+		skill = info.skills,
+		div = Select('.skill_info p'); arr = [],
+		rate = Select('.usage_thumb')
+
+		for(var i=0; i<btn.length; i++) {
+			arr.push(btn[i]);
+		}
+
+		for(var j=0; j<btn.length; j++) {
+			AddEvnt(btn[j], 'click', function(){
+				var index = arr.indexOf(this)
+				div.innerHTML = 'Skill: ' + skill[index].name + '<br \
+				/>' + 'Version: ' + skill[index].version + '<br />'
+
+				rate.style.width = skill[index].percent;
+			})
+		}
 }

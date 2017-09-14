@@ -14,10 +14,13 @@
 
 .main > div {
 	display: none;
+	opacity: 0;
+	transition: all 0.5s ease-in-out forwards;
 }
 
 .main > div.show {
 	display: block;
+	opacity: 1;
 }
 
 .container {
@@ -111,7 +114,7 @@
 
 
 .about.show {
-	background-image: url("https://static.pexels.com/photos/6482/black-and-white-man-person-hands.jpg");
+	background-image: url("https://static.pexels.com/photos/7060/man-people-space-desk.jpg");
 	background-color: #4d883d;
 }
 
@@ -146,6 +149,7 @@
 }
 
 .show .inner_container h1 {
+	float: left;
 	width: 100%;
 	height: auto;
 	margin: 0 0 20px 0;
@@ -165,8 +169,55 @@
 }
 
 .show .skills {
+	float: left;
 	width: 100%;
-	height: 200px;
+	height: auto;
+	margin:  0 0 20px 0;
+}
+
+.show .skills img {
+	width: 60px;
+	height: 60px;
+	float: left;
+	margin: 5px;
+	cursor: pointer;
+}
+
+.show .others .skill_info {
+	width: 100%;
+	height: auto;
+	float: left;
+}
+
+.show .others .skill_info p {
+	color: rgba(255,255,255,0.8);
+	margin: 5px 0;
+}
+
+.show .usage {
+	width: 100%;
+	height: 10px;
+	position: relative;
+	margin: 10px 0;
+	border: 2px solid rgba(255,255,255,0.6);
+	border-top-color: transparent;
+	border-bottom-color: transparent;
+	box-sizing: border-box;
+}
+
+.show .usage .usage_track {
+	position: absolute;
+	width: 100%;
+	height: 4px;
+	background-color: rgba(255,255,255,0.3);
+	top: 1px;
+}
+
+.show .usage .usage_thumb {
+	width: 0;
+	height: 100%;
+	background-color: rgba(255,255,255,0.5);
+	transition: all 0.8s ease-in-out;
 }
 
 
