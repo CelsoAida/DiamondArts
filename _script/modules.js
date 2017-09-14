@@ -88,3 +88,25 @@ function CreateAndAppend(child, parent, callback) {
 	// the element that was created
 	callback(this.child)
 }
+
+function Clas(elem, type, classname) {
+	this.type = type
+	this.name = classname
+
+	if(typeof(elem) === 'string')
+		this.elem = Select(elem);
+	else if(!elem)
+		console.log('Error: can\'t read element')
+	else
+		this.elem = elem
+
+
+	if(this.type === 'add')
+		this.elem.classList.add(this.name)
+	else if(this.type === 'remove')
+		this.elem.classList.remove(this.name)
+	else if(this.type === 'toggle')
+		this.elem.classList.toggle(this.name)
+	else
+		console.log('type error: classList method undefined')
+}

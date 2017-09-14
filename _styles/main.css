@@ -5,11 +5,19 @@
 	left: 0;
 	width: 100vw;
 	height: 100vh;
-	background-image: url('https://static.pexels.com/photos/251225/pexels-photo-251225.jpeg');
-	background-color: #222;
+	background-image: url('https://static.pexels.com/photos/196658/pexels-photo-196658.jpeg');
+	background-color: #09524e;
 	background-blend-mode: multiply;
 	background-size: cover;
 	z-index: 10;
+}
+
+.main > div {
+	display: none;
+}
+
+.main > div.show {
+	display: block;
 }
 
 .container {
@@ -21,31 +29,28 @@
 	left: 40px;
 }
 
-.welcome {
-	display: none;
+.show .welcome {
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
 
-.welcome {
-	display: block;
-}
-
-.message {
+.show .message {
 	width: auto;
 	height: auto;
 	float: left;
 }
 
-.welcome p {
-	color: #f0f0f0;
-	font-size: 20px;
-	line-height: 30px;
-	text-align: center;
+.show .welcome h1 {
 	float: left;
-	margin: 2px 5px;
+	width: 100%;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 50px;
+	margin: 0 0 20px 0;
+	opacity: 0;
 	-webkit-animation: popup 0.8s ease-in-out forwards;
 	-moz-animation: popup 0.8s ease-in-out forwards;
 	-ms-animation: popup 0.8s ease-in-out forwards;
@@ -53,7 +58,27 @@
 	animation: popup 0.8s ease-in-out forwards;
 }
 
-.welcome a {
+.show .welcome p {
+	float: left;
+	color: #f0f0f0;
+	font-size: 20px;
+	line-height: 30px;
+	text-align: justify;
+	float: left;
+	margin: 2px 5px;
+	opacity: 0;
+	font-weight: thin;
+}
+
+.show .welcome p {
+	-webkit-animation: blurry 5s ease-in-out forwards;
+	-moz-animation: blurry 5s ease-in-out forwards;
+	-ms-animation: blurry 5s ease-in-out forwards;
+	-o-animation: blurry 5s ease-in-out forwards;
+	animation: blurry 5s ease-in-out forwards;
+}
+
+.show .welcome a {
 	float: left;
 	display: none;
 	position: relative;
@@ -72,18 +97,76 @@
 	opacity: 0;
 }
 
-.welcome a.show {
-	opacity: 0.2;
+.show .welcome p.name {
+	width: 100%;
+	margin: 20px 0 0 0;
+	text-align: right;
+	-webkit-animation: shows 0.8s ease-in-out forwards;
+	-moz-animation: shows 0.8s ease-in-out forwards;
+	-ms-animation: shows 0.8s ease-in-out forwards;
+	-o-animation: shows 0.8s ease-in-out forwards;
+	animation: shows 0.8s ease-in-out forwards;
+	font-size: 16px;
 }
 
-.welcome a:hover {
-	border-radius: 20px;
-	border: 1px solid #fff;
-	background-color: rgba(255,255,255, 0.05);
-	opacity: 1;
-}
 
-
-.about {
+.about.show {
 	background-image: url("https://static.pexels.com/photos/6482/black-and-white-man-person-hands.jpg");
+	background-color: #4d883d;
 }
+
+.show .inner_container {
+	width: 80%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+
+
+.show .info {
+	float: left;
+	width: 60%;
+	height: auto;
+	margin: 10px 40px 0 0;
+	float: left;
+}
+
+.show .others {
+	float: left;
+	width: calc(40% - 40px);
+	overflow: hidden;
+	overflow-y: auto;
+	background-color: rgba(0,0,0,0.2);
+	box-sizing: border-box;
+	padding: 10px 20px;
+	border: 1px solid rgba(250,250,250,0.2);
+	box-shadow: 0 0 8px rgba(0,0,0,0.8);
+}
+
+.show .inner_container h1 {
+	width: 100%;
+	height: auto;
+	margin: 0 0 20px 0;
+	border-bottom: 1px solid #fff;
+	font-size: 30px;
+	line-height: 50px;
+}
+
+.show .info p {
+	float: left;
+	color: #f0f0f0;
+	font-size: 16px;
+	line-height: 30px;
+	text-align: justify;
+	float: left;
+	margin: 2px 5px;
+}
+
+.show .skills {
+	width: 100%;
+	height: 200px;
+}
+
+

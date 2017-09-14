@@ -1,16 +1,16 @@
 var info = {
-	welcome: 'Lorem ipsum dolor sit amet, \
-			  consectetur adipisicing elit. \
-			  Eum doloribus, possimus laudantium \
-			  distinctio temporibus similique \
-			  repellendus a quam, sed reiciendis, \
-			  itaque, mollitia aliquid? In sunt \
-			  labore vero debitis ipsa. Repudiandae. \
-			  Lorem ipsum dolor sit amet, consectetur \
-			  adipisicing elit. Ipsa maiores labore ex \
-			  placeat vero nihil ea officia tenetur \
-			  quis id in, explicabo cupiditate expedita. \
-			  Iusto, magni voluptatem ducimus voluptates \
-			  explicabo.',
-	aboutme: ''
+	welcome: { 
+		title: 'Hello there,',
+		message: 'Welcome to Diamond Arts GH. I help bring your ideas to life \
+with design and code. I am glad you visited my website and I \
+hope you are satisfied with the infomation given you on this website. \
+Contact me for your web design and development, corporate identity \
+design, Logo design and other graphic design projects.'},
+
+	aboutme: 'Bornt Prince Donkor, I am the founder of Diamond Arts Gh, a firm that \
+looks to bring the ideas of people to life with design and code. I have\
+had quite a journey in design, but I love to code and develop things from\
+nothing. I hope to change the world and make it a better place for all\
+with my designs and code',
+	animName: ['shows', 'popup', 'blurry']
 }
