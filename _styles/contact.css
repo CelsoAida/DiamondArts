@@ -1,0 +1,226 @@
+.hireMe.show .container .holder {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 80%;
+}
+
+.hireMe.show .container .holder div {
+	float: left;
+}
+
+.leaveMsg {
+	float: left;
+	width: 500px;
+	padding-right: 50px;
+	border-right: 1px dashed #fff;
+	margin-right: 50px;
+	overflow: hidden;
+}
+
+.leaveMsg h1, .makeRequest h1 {
+	width: auto;
+	font-size: 20px;
+	margin-bottom: 20px;
+	padding: 10px;
+	background-color: #fff;
+	color: #222;
+	float: right;
+}
+
+input[type="text"], input[type="email"] {
+	width: 100%;
+	height: 40px;
+	margin-bottom: 20px;
+	text-indent: 20px;
+	border: none;
+	background-color: rgba(0,0,0,0.2);
+	color: rgba(255,255,255,0.5);
+	color: #e4d887;
+	box-sizing: border-box;
+	appearance: none;
+	outline: none;
+	border: 1px solid rgba(228,216,135,0);
+	transition: all 0.3s ease-in-out;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder {
+	color: rgba(228,216,135,0.3);
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover {
+	border: 1px solid rgba(228,216,135,0.5);
+	box-shadow: 0 0 10px rgba(0,0,0,0.5) inset;
+}
+
+textarea {
+	width: 100%;
+	height: 300px;
+	box-sizing: border-box;
+	padding: 10px;
+	border: none;
+	background-color: rgba(0,0,0,0.2);
+	color: rgba(255,255,255,0.5);
+	margin-bottom: 20px;
+	color: #e4d887;
+	box-sizing: border-box;
+	appearance: none;
+	outline: none;
+}
+
+textarea::placeholder {
+	color: rgba(228,216,135,0.3);
+}
+
+textarea:hover {
+	border: 1px solid rgba(228,216,135,0.5);
+	box-shadow: 0 0 10px rgba(0,0,0,0.5) inset;
+}
+
+input[type="button"],
+input[type="submit"] {
+	width: 200px;
+	height: 40px;
+	border: none;
+	background-color: #d0c164;
+	color: #222;
+	float: right;
+	border: 1px solid rgba(228,216,135,0);
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+
+input[name="specify"] {
+	display: none;
+}
+
+.makeRequest input[type="button"],
+.makeRequest h1 {
+	float: left;
+	position: relative;
+}
+
+.marginRemove {
+	margin-left: 200px;
+	opacity: 0;
+}
+
+.marginRemove:nth-child(4) {
+	margin-right: 150px;
+	opacity: 0;
+}
+
+.makeRequest {
+	float: left;
+	width: 400px;
+	height: auto;
+}
+
+.makeRequest .product, .makeRequest .subProduct {
+	width: 100%;
+	height: auto;
+	position: relative;
+	margin-bottom: 20px;
+	float: left;
+}
+
+.makeRequest .subProduct {
+	display: none;
+}
+
+.makeRequest .product .select, 
+.makeRequest .subProduct .select {
+	width: inherit;
+	height: 40px;
+	text-indent: 20px;
+	background-color: rgba(0,0,0,0.2);
+}
+
+.makeRequest .product .select .input,
+.makeRequest .subProduct .select .input {
+	float: left;
+	width: 360px;
+	height: 40px;
+	color: rgba(228,216,135,0.3);
+	line-height: 40px;
+	text-indent: 20px;
+}
+
+.makeRequest .product .select .dropDownBtn,
+.makeRequest .subProduct .select .dropDownBtn {
+	float: left;
+	width: 40px;
+	height: 40px;
+	background-color: #fff;
+	cursor: pointer;
+	position: relative;
+}
+
+.makeRequest .product .select .dropDownBtn:before,
+.makeRequest .subProduct .select .dropDownBtn:before {
+	content: "";
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	box-sizing: border-box;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(-45deg);
+	margin-top: -3px;
+	border: 2px solid #222;
+	border-top-color: transparent;
+	border-right-color: transparent;
+}
+
+.makeRequest .product .options,
+.makeRequest .subProduct .options {
+	width: 100%;
+	height: 0;
+	position: absolute;
+	left: 0;
+	margin-top: 40px;
+	-webkit-transition: height 0.5s ease-in-out;
+	-moz-transition: height 0.5s ease-in-out;
+	-o-transition: height 0.5s ease-in-out;
+	transition: height 0.5s ease-in-out;
+	z-index: 100;
+	overflow: hidden;
+}
+
+.makeRequest .product .options.active,
+.makeRequest .subProduct .options.active {
+	height: auto;
+}
+
+.makeRequest .subProduct .options.active {
+	height: 160px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.makeRequest .product .options p,
+.makeRequest .subProduct .options p {
+	width: 100%;
+	height: 40px;
+	background-color: #d0c164;
+	color: #222;
+	text-indent: 20px;
+	cursor: pointer;
+	line-height: 40px;
+	float: left;
+	margin: 0;
+}
+
+.makeRequest .product .options p:hover,
+.makeRequest .subProduct .options p:hover {
+	background-color: #222;
+	color: #d0c164;
+}
+
+.leaveMsg h1.marginRemove {
+	margin-right: 100px;
+}

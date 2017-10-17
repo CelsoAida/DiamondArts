@@ -1,20 +1,26 @@
 /*== Homepage Styles ==*/
-.home, .about {
+.main > .home,
+.main > .about,
+.main > .portfolio,
+.main > .services {
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100vw;
 	height: 100vh;
-	background-image: url('https://static.pexels.com/photos/196658/pexels-photo-196658.jpeg');
+	/*background-image: url('https://static.pexels.com/photos/196658/pexels-photo-196658.jpeg');
+	background-image: url('../_images/bg.jpg');
 	background-color: #09524e;
 	background-blend-mode: multiply;
-	background-size: cover;
+	background-size: cover;*/
 	z-index: 10;
 }
 
 .main > div {
 	display: none;
 	opacity: 0;
+	-webkit-transition: all 0.5s ease-in-out forwards;
+	-moz-transition: all 0.5s ease-in-out forwards;
 	transition: all 0.5s ease-in-out forwards;
 }
 
@@ -24,7 +30,7 @@
 }
 
 .container {
-	width: calc(100vw - 40px;);
+	width: calc(100vw - 40px);
 	height: 100vh;
 	background: transparent;
 	position: relative;
@@ -36,6 +42,8 @@
 	position: absolute;
 	top: 50%;
 	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 }
 
@@ -49,7 +57,7 @@
 	float: left;
 	width: 100%;
 	height: 40px;
-	text-align: center;
+	text-align: left;
 	line-height: 40px;
 	font-size: 50px;
 	margin: 0 0 20px 0;
@@ -64,13 +72,14 @@
 .show .welcome p {
 	float: left;
 	color: #f0f0f0;
-	font-size: 20px;
+	font-size: 18px;
 	line-height: 30px;
-	text-align: justify;
+	/*text-align: justify;*/
 	float: left;
 	margin: 2px 5px;
 	opacity: 0;
-	font-weight: thin;
+	font-weight: 50px;
+	letter-spacing: 0.5px;
 }
 
 .show .welcome p {
@@ -94,16 +103,21 @@
 	line-height: 40px;
 	font-size: 16px;
 	border-radius: 0px;
-	transition: all 0.5s ease-in-out;
 	box-sizing: border-box;
 	border: 1px solid transparent;
 	opacity: 0;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
 }
 
 .show .welcome p.name {
-	width: 100%;
+	float: right;
+	padding: 5px 20px;
+	background-color: #fff;
+	color: #222;
+	cursor: pointer;
 	margin: 20px 0 0 0;
-	text-align: right;
 	-webkit-animation: shows 0.8s ease-in-out forwards;
 	-moz-animation: shows 0.8s ease-in-out forwards;
 	-ms-animation: shows 0.8s ease-in-out forwards;
@@ -113,111 +127,11 @@
 }
 
 
-.about.show {
-	background-image: url("https://static.pexels.com/photos/7060/man-people-space-desk.jpg");
-	background-color: #4d883d;
-}
-
-.show .inner_container {
-	width: 80%;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
 
 
 
-.show .info {
-	float: left;
-	width: 60%;
-	height: auto;
-	margin: 10px 40px 0 0;
-	float: left;
-}
 
-.show .others {
-	float: left;
-	width: calc(40% - 40px);
-	overflow: hidden;
-	overflow-y: auto;
-	background-color: rgba(0,0,0,0.2);
-	box-sizing: border-box;
-	padding: 10px 20px;
-	border: 1px solid rgba(250,250,250,0.2);
-	box-shadow: 0 0 8px rgba(0,0,0,0.8);
-}
 
-.show .inner_container h1 {
-	float: left;
-	width: 100%;
-	height: auto;
-	margin: 0 0 20px 0;
-	border-bottom: 1px solid #fff;
-	font-size: 30px;
-	line-height: 50px;
-}
 
-.show .info p {
-	float: left;
-	color: #f0f0f0;
-	font-size: 16px;
-	line-height: 30px;
-	text-align: justify;
-	float: left;
-	margin: 2px 5px;
-}
-
-.show .skills {
-	float: left;
-	width: 100%;
-	height: auto;
-	margin:  0 0 20px 0;
-}
-
-.show .skills img {
-	width: 60px;
-	height: 60px;
-	float: left;
-	margin: 5px;
-	cursor: pointer;
-}
-
-.show .others .skill_info {
-	width: 100%;
-	height: auto;
-	float: left;
-}
-
-.show .others .skill_info p {
-	color: rgba(255,255,255,0.8);
-	margin: 5px 0;
-}
-
-.show .usage {
-	width: 100%;
-	height: 10px;
-	position: relative;
-	margin: 10px 0;
-	border: 2px solid rgba(255,255,255,0.6);
-	border-top-color: transparent;
-	border-bottom-color: transparent;
-	box-sizing: border-box;
-}
-
-.show .usage .usage_track {
-	position: absolute;
-	width: 100%;
-	height: 4px;
-	background-color: rgba(255,255,255,0.3);
-	top: 1px;
-}
-
-.show .usage .usage_thumb {
-	width: 0;
-	height: 100%;
-	background-color: rgba(255,255,255,0.5);
-	transition: all 0.8s ease-in-out;
-}
 
 

@@ -1,0 +1,181 @@
+.folio-holder {
+	width: calc(100vw - 110px);
+	height: calc(100vh - 50px);
+	display: grid;
+	grid-template-columns: repeat(12, minmax(80px, 1fr));
+	grid-template-rows: repeat(3, minmax(80px, 1fr));
+	grid-gap: 10px;
+	padding: 10px 10px;
+}
+
+.folio-holder div {
+	background-color: #fff;
+	overflow: hidden;
+	background-size: cover;
+	transition: all 0.8s ease-in-out;
+	position: relative;
+	box-sizing: border-box;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+
+.folio-holder div:nth-child(1) {
+	background-image: url('../_images/opexify.jpg');
+	background-position: 0 -15px;
+	grid-column: 1 / span 5;
+	grid-row: 1 / span 1;
+}
+
+.folio-holder div.active {
+	background-position: 0 -100px;
+}
+
+.folio-holder div:nth-child(2) {
+	background-image: url('../_images/web.jpg');
+	background-position: -50px 0;
+	grid-column: 6 / span 4;
+	grid-row: 1 / span 2;
+}
+
+.folio-holder div.active:nth-child(2) {
+	background-position: -120px 0;
+}
+
+.folio-holder div:nth-child(3) {
+	background-image: url('../_images/flyer.jpg');
+	grid-column: 10 / -1;
+	grid-row: 1 / span 1;
+}
+
+.folio-holder div.active:nth-child(3) {
+	background-position: 0px -80;
+}
+
+.folio-holder div:nth-child(4) {
+	background-image: url('../_images/greenify.jpg');
+	grid-column: 10 / -1;
+	grid-row: 2 / span 1;
+}
+
+.folio-holder div:nth-child(5) {
+	background-image: url('../_images/corporate identity.jpg');
+	grid-column: 1 / span 3;
+	grid-row: 2 / span 1;
+}
+
+.folio-holder div:nth-child(6) {
+	background-image: url('../_images/seph1.png');
+	grid-column: 4 / span 2;
+	grid-row: 2 / span 1;
+}
+
+.folio-holder div.active:nth-child(6) {
+	background-position: -250px 0;
+}
+
+.folio-holder div:nth-child(7) {
+	background-image: url('../_images/bestmuzik.jpg');
+	grid-column: 1 / span 4;
+	grid-row: 3 / span 1;
+}
+
+.folio-holder div:nth-child(8) {
+	background-image: url('../_images/dip.jpg');
+	grid-column: 5 / span 3;
+	grid-row: 3 / span 1;
+}
+
+.folio-holder div.active:nth-child(8) {
+	background-position: -50px 0;
+}
+
+.folio-holder div:nth-child(9) {
+	background-image: url('../_images/bid.jpg');
+	background-position: 0 -100px;
+	grid-column: 8 / -1;
+	grid-row: 3 / span 1;
+}
+
+.folio-holder div.active:nth-child(9) {
+	background-position: 0 -200px;
+}
+
+.folio-holder div p {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(110, 30, 40, 0.8);
+	background-color: rgba(0,0,0,0.8);
+	opacity: 0;
+	transition: all 0.8s ease-in-out;
+	text-align: center;
+}
+
+.folio-holder div p span:nth-child(1) {
+	position: absolute;
+	top: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	opacity: 0;
+	transition: all 0.3s ease-in-out;
+	border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+.folio-holder div.active p span:nth-child(1) {
+	opacity: 1;
+}
+
+.folio-holder div p span:nth-child(1)::before {
+	content: "";
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: -20px;
+	width: 1px;
+	height: 20px;
+	background-color: #fff;
+	transition: all 0.3s ease-in-out;
+}
+
+.folio-holder div p span:nth-child(1)::after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: -20px;
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background-color: #fff;
+	transition: all 0.3s ease-in-out;
+	opacity: 0;
+}
+
+.folio-holder div.active p span:nth-child(1)::after {
+	opacity: 1;
+	top: -5px;
+	transition: all 0.3s 0.5s ease-in-out;
+}
+
+.folio-holder div p span:nth-child(2) {
+	display: block;
+	font-size: 30px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 0;
+	width: 70%;
+	color: #d0c164;
+	text-shadow: 0 0 5px rgba(0,0,0,0.5)
+}
+
+.folio-holder div.active p span:nth-child(2) {
+	-webkit-animation: blurry 1.2s ease-in-out forwards;
+	-o-animation: blurry 1.2s ease-in-out forwards;
+	animation: blurry 1.2s ease-in-out forwards;
+}
+
+.folio-holder div.active p {
+	opacity: 1;
+}

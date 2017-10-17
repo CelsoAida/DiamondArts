@@ -5,8 +5,13 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="shortcut icon" type="image/x-icon" href="_images/favicon.png" />
+	<link rel="stylesheet" type="text/css" href="_styles/backgrounds.css" />
 	<link rel="stylesheet" type="text/css" href="_styles/menu.css" />
 	<link rel="stylesheet" type="text/css" href="_styles/main.css" />
+	<link rel="stylesheet" type="text/css" href="_styles/about.css" />
+	<link rel="stylesheet" type="text/css" href="_styles/folio.css" />
+	<link rel="stylesheet" type="text/css" href="_styles/services.css" />
+	<link rel="stylesheet" type="text/css" href="_styles/contact.css" />
 	<link rel="stylesheet" type="text/css" href="_styles/fx.css" />
 </head>
 <body>
@@ -18,16 +23,27 @@
 					<li><a href="#about"><img src="_images/about.png" alt="about"></a></li>
 					<li><a href="#portfolio"><img src="_images/portfolio.png" alt="portfolio"></a></li>
 					<li><a href="#services"><img src="_images/services.png" alt="services"></a></li>
-					<li><a href="#contact"><img src="_images/contact.png" alt="contact"></a></li>
+					<li><a href="#hireMe"><img src="_images/contact.png" alt="contact"></a></li>
 				</ul>
 			</div>
 		</section>
+
+		<section class="backgrounds">
+			<div class="home"></div>
+			<div class="about"></div>
+			<div class="portfolio"></div>
+			<div class="services"></div>
+			<div class="hireMe"></div>
+		</section>
+
 		<section class="main">
+			
 			<div class="home">
 				<div class="container">
 					<div class="welcome">
 						<div class="message">
 						</div>
+						<div class="welcomebtn"></div>
 					</div>
 				</div>
 			</div>
@@ -58,12 +74,242 @@
 							</div>
 						</div>
 					</div>
+
+					
 				</div>
 			</div>
+
+			<div class="portfolio">
+				<div class="container">
+					<div class="folio-holder">
+						<div>
+							<p>
+								<span>Opexify</span>
+								<span>Logo Design</span>
+							</p>
+						</div>
+
+						<div>
+							<p>
+								<span>FGC Solution Pastures</span>
+								<span>Web Design & Development</span>
+							</p>
+						</div>
+
+						<div>
+							<p>
+								<span>FGC Solution Pastures</span>
+								<span>Flyer Design</span>
+							</p>
+						</div>
+
+						<div>
+							<p>
+								<span>Practice</span>
+								<span>Web Design</span>
+							</p>
+						</div>
+
+						<div>
+							<p>
+								<span>Practice</span>
+								<span>Corporate Identity Design</span>
+							</p>
+						</div>
+
+						<div>
+							<p>
+								<span>Sista Seph</span>
+								<span>Logo Design</span>
+							</p>
+						</div>
+
+						<div>
+							<p>
+								<span>Practice</span>
+								<span>UX/UI design</span>
+							</p>
+						</div>
+
+						<div>
+							<p>
+								<span>DiP Circle Production</span>
+								<span>Logo Design & TV Show Promotion</span>
+							</p>
+						</div>
+
+						<div>
+							<p>
+								<span>Bid Network</span>
+								<span>Banner Design</span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="services">
+				<div class="container">
+					<div class="holder">
+						<!-- web design & dev. section -->
+						<div class="web-design">
+							<div>
+								<div>
+									<h1>Web Design & Development</h1>
+										<div class="service-items">
+											<p>Website Design</p>
+											<p>Frontend Development</p>
+										</div>
+								</div>
+							</div>
+						</div>
+						
+						<!-- Logo design section -->
+						<div class="logo-design">
+							<div>
+								<div>
+									<h1>Logo Design</h1>
+										<div class="service-items">
+											<p>Logo Creation</p>
+											<p>Logo Redesign</p>
+											<p>Product Logo Design</p>
+										</div>
+								</div>
+							</div>
+						</div>
+						
+						<!-- Corporate Identity Design section -->
+						<div class="corporate">
+							<div>
+								<div>
+									<h1>Corporate Identity Design</h1>
+										<div class="service-items">
+											<p>Business Card Design</p>
+											<p>Letterhead Design</p>
+											<p>Envelop Design</p>
+											<p>Book Cover Design</p>
+											<p>Fyler Design</p>
+											<p>Logo Design</p>
+										</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Graphic Design section -->
+						<div class="graphic-design">
+							<div>
+								<div>
+									<h1>Graphic Design</h1>
+										<div class="service-items">
+											<p>Business Card Design</p>
+											<p>Banner Design</p>
+											<p>Letterhead Design</p>
+											<p>Envelop Design</p>
+											<p>Book Cover Design</p>
+											<p>Fyler Design</p>
+										</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="hireMe">
+				<div class="container">
+					<div class="holder">
+						<div class="leaveMsg">
+							<h1>Leave A Message</h1>
+							<form action="index.html" method="POST">
+							<input type="text" name="name" placeholder="Full Name" required="" autocomplete="off" />
+
+							<input type="email" name="email" placeholder="Email" required="" autocomplete="off" />
+
+							<textarea name="message" placeholder="Write message here" required=""></textarea>
+
+							<input type="submit" name="submit" value="Submit" />
+							</form>
+						</div>
+
+						<div class="makeRequest">
+							<h1>Hire Me</h1>
+							<form action="" method="POST">
+								<input type="text" name="firmname" placeholder="Personal Name / Firm's Name" />
+								<input type="email" name="email" placeholder="Email" />
+								<input type="text" name="contact" placeholder="Contact (optional)" />
+								<input type="text" name="country" placeholder="Country" />
+
+								<div class="product">
+									<div class="select">
+										<div class="input">- Select Product Category - </div>
+										<div class="dropDownBtn"></div>
+									</div>
+									<div class="options">
+										<p>Web Design and Development</p>
+
+										<p>Logo Design</p>
+
+										<p>Corporate Identity Design</p>
+
+										<p>Graphic Design</p>
+									</div>
+								</div>
+
+								<div class="subProduct">
+									<div class="select">
+										<div class="input">- Select Product Option -</div>
+										<div class="dropDownBtn"></div>
+									</div>
+									<div class="options">
+										
+									</div>
+								</div>
+
+								<input type="text" name="specify" placeholder="specify" />
+
+								<input type="button" value="Submit" />
+							</form>
+						</div>
+					</div>
+
+					
+				</div>
+			</div>
+		</section>
+
+		<section class="contact-list">
+			<div class="contact-btn">
+				<div class="btn"></div>
+			</div>
+			<div class="contact-holder">
+				<h1>Contact Us</h1>
+				<p>
+					+233 (0) 57 899 4859
+					<br />
+					+233 (0) 55 313 7464
+				</p>
+
+				<p>pdonkor6@gmail.com</p>
+				<p>
+					Bubiashie-Atico Kuntunpor Street.
+					<br />
+					Accra, Ghana
+				</p>
+				<p><a href="http://www.facebook.com/diamondartsgh">@DiamondArtsGh</a></p>
+				<p><a href="http://www.twitter.com/princedonkor">@pdonkor6</a></p>
+				<p><a href="http://www.github.com/CelsoAida">Github</a></p>
+				<p><a href="http://www.codepen.io">Codepen</a></p>
+				<p><a href="http://www.pexels.com"></a></p>
+			</div>
+		</section>
+		
+		<section class="footer">
+			<p>&copy 2017 Diamond Arts</p>
 		</section>
 	</div>
 	<script type="text/javascript" src="_script/data.js"></script>
 	<script type="text/javascript" src="_script/modules.js"></script>
 	<script type="text/javascript" src="_script/main.js"></script>
+	<script type="text/javascript" src="_script/main.2.js"></script>
 </body>
 </html>

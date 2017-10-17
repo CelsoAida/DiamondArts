@@ -71,6 +71,10 @@ body {
 	transition: all 0.8s ease-in-out;
 }
 
+.navbar .icons ul.color-change li a img {
+	filter: brightness(0.6);
+}
+
 .navbar .icons ul li.active a img, .navbar .icons ul li a img:hover {
 	width: 20px;
 	height: 20px;
@@ -93,6 +97,11 @@ body {
 	transition: all 0.5s ease-in-out;
 }
 
+/*.navbar .icons ul.color-change li:before {
+	color: #222;
+	font-weight: bolder;
+}*/
+
 .navbar .icons ul li:after {
 	content: "";
 	position: absolute;
@@ -106,6 +115,11 @@ body {
 	opacity: 0;
 	transition: all 0.5s ease-in-out;
 }
+
+/*.navbar .icons ul.color-change li:after {
+	color: #222;
+	background-color: #222;
+}*/
 
 .navbar .icons ul li.anim:after {
 	opacity: 1;
@@ -136,5 +150,132 @@ body {
 }
 
 .navbar .icons ul li:nth-child(5):before {
-	content: "Contact";
+	content: "Hire Me";
+}
+
+
+.footer {
+	position: absolute;
+	bottom: calc(100vh + 40px);
+	left: 0;
+	width: 100vw;
+	height: 20px;
+	z-index: 1000000;
+	text-align: right;
+	line-height: 20px;
+	box-sizing: border-box;
+	padding-right: 40px;
+}
+
+.contact-list {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100vh;
+	z-index: 10000;
+}
+
+.contact-list .contact-btn {
+	float: left;
+	width: 40px;
+	height: 40px;
+	background-color: transparent;
+	cursor: pointer;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	border: 1px solid #fff;
+	border-radius: 50%;
+	margin-right: 10px;
+	transition: background-color 0.8s ease-in-out;
+}
+
+.contact-list .contact-btn:hover {
+	background-color: rgba(255,255,255,0.2);
+}
+
+.contact-list .contact-btn.active {
+	background-color: #fff;
+	height: 100%;
+	width: 30px;
+	border-radius: 0;
+	margin-right: 0;
+}
+
+.contact-list .contact-btn .btn {
+	position: absolute;
+	width: 20px;
+	height: 2px;
+	background-color: #fff;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.contact-list .contact-btn .btn:before, 
+.contact-list .contact-btn .btn:after {
+	content: "";
+	width: 20px;
+	height: 2px;
+	position: absolute;
+	transition: 0.3s;
+}
+
+.contact-list .contact-btn .btn:before {
+	top: -5px;
+	background-color: #fff;
+}
+
+.contact-list .contact-btn .btn:after {
+	top: 5px;
+	background-color: #fff;
+}
+
+.contact-list .contact-btn.active .btn {
+	background: transparent;
+}
+
+.contact-list .contact-btn.active .btn:before {
+	transform: rotate(45deg);
+	top: 0;
+	background-color: #444;
+}
+
+.contact-list .contact-btn.active .btn:after {
+	transform: rotate(-45deg);
+	top: 0;
+	background-color: #444;
+}
+
+.contact-list .contact-holder {
+	float: left;
+	width: 300px;
+	height: 100%;
+	padding: 60px 20px;
+	box-sizing: border-box;
+	background-color: #222;
+	margin-right: -300px;
+	transition: all 0.8s ease-in-out;
+}
+
+.contact-list .contact-holder.active {
+	margin-right: 0px;
+}
+
+.contact-list p, .contact-list p a {
+	color: rgba(228,216,135,0.5);
+	margin: 10px 0;
+	transition: all 0.8s ease-in-out;
+}
+
+.contact-list p:hover,
+.contact-list p a:hover {
+	color: rgba(228,216,135,1);
+	transition: all 0.3s ease-in-out;
+}
+
+.contact-list h1 {
+	font-size: 16px;
+	border-bottom: 1px dashed rgba(255,255,255,0.3);
+	line-height: 25px;
 }

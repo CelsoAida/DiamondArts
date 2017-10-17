@@ -1,0 +1,169 @@
+.services.show .container .holder {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 20px;
+	width: 90%;
+	height: 70%;
+}
+
+.services.show .container .holder > div {
+	background-color: #222;
+	box-shadow: 0 0 5px rgba(0,0,0,0.8);
+	overflow: hidden;
+	position: relative;
+}
+
+.services.show .container .holder div.web-design {
+	background-image: url(../_images/webdesign1.jpg);
+	background-size: cover;
+	background-position: -100px 0;
+	
+}
+
+.services.show .container .holder div h1 {
+	position: absolute;
+	top: calc(100% - 40px);
+	width: 100%;
+	height: 40px;
+	background-color: rgba(0,0,0,0.5);
+	color: #d0c164;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	transform: translateX(-50%);
+	font-size: 16px;
+	text-indent: 20px;
+	line-height: 40px;
+	-webkit-transition: top 0.8s ease-in-out;
+	-moz-transition: top 0.8s ease-in-out;
+	transition: top 0.8s ease-in-out;
+}
+
+.services.show .container .holder div.active h1 {
+	top: 0px;
+	text-indent: 0;
+	text-align: center;
+	color: #d0c164;
+}
+
+.services.show .container .holder > div > div {
+	width: 100%;
+	height: 100%;
+	-webkit-transition: all 0.8s ease-in-out;
+	-moz-transition: all 0.8s ease-in-out;
+	transition: all 0.8s ease-in-out;
+}
+
+.services.show .container .holder div.active > div {
+	background-color: rgba(45,121,106,0.7);
+	background-color: rgba(0,0,0,0.7);
+}
+
+.services.show .container .holder div > div > div {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	background-color: transparent;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.services.show .container .holder div > div > div:before {
+	content: "";
+	position: absolute;
+	width: inherit;
+	height: inherit;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	border: 1px dashed #fff;
+	opacity: 0;
+}
+
+.services.show .container .holder div.active > div > div:before {
+	width: 90%;
+	height: calc(100% - 80px);
+	top: calc(50% + 20px);
+	opacity: 1;
+	-webkit-transition: all 0.3s 0.3s ease-in-out;
+	-moz-transition: all 0.3s 0.3s ease-in-out;
+	transition: all 0.3s 0.3s ease-in-out;
+}
+
+.services.show .container .holder div div.service-items {
+	width: 70%;
+	height: 200px;
+	padding: 20px;
+}
+
+.services.show .container .holder div p {
+	opacity: 0;
+	margin-bottom: 10px;
+	font-size: 16px;
+	margin-top: 30px;
+	position: relative;
+	-webkit-transition: all 0.8s ease-in-out;
+	-moz-transition: all 0.8s ease-in-out;
+	transition: all 0.8s ease-in-out;
+}
+
+.services.show .container .holder div.active p {
+	opacity: 1;
+	margin-top: 0;
+	-webkit-transition: all 0.8s 0.8s ease-in-out;
+	-moz-transition: all 0.8s 0.8s ease-in-out;
+	transition: all 0.8s 0.8s ease-in-out;
+}
+
+.services.show .container .holder div.active p::before {
+	content: "";
+	position: absolute;
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	top: 50%;
+	left: -10px;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	transform: translateY(-50%);
+	background-color: #fff;
+}
+
+.services.show .container .holder div.active p::after {
+	content: "";
+	position: absolute;
+	width: 15px;
+	height: 1px;
+	border-radius: 50%;
+	top: calc(50% - 1px);
+	left: -15px;
+	transform: translateY(-50%);
+	background-color: #fff;
+	-webkit-transform-origin: center;
+	-moz-transform-origin: center;
+	transform-origin: center;
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	transform: rotate(90deg);
+	-webkit-transition: all 0.8s ease-in-out;
+	-moz-transition: all 0.8s ease-in-out;
+	transition: all 0.8s ease-in-out;
+}
+
+.services.show .container .holder div.active p:hover::after {
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	transform: rotate(180deg);
+}

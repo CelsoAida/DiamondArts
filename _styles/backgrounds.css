@@ -1,0 +1,72 @@
+.backgorunds {
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9;
+}
+
+.backgrounds div {
+	width: 100vw;
+	height: 100vw;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+}
+
+.backgrounds div img {
+	width: 100vw;
+	height: 100vh;
+	filter: blur(2px) sepia(100%) grayscale(90%) brightness(0.1);
+}
+
+.backgrounds .home {
+	background-image: url('../_images/home.jpeg');
+	background-size: cover;
+	background-color: #09524e;
+	background-blend-mode: multiply;
+
+}
+
+.backgrounds .about {
+	/*background-image: url("https://static.pexels.com/photos/7060/man-people-space-desk.jpg");*/
+	background-image: url('../_images/services.jpeg');
+	background-color: #4d883d;
+	background-size: cover;
+	background-blend-mode: overlay;
+}
+
+.backgrounds .portfolio {
+	background-image: url();
+	background-image: url('../_images/webdesign.jpg');
+	background-color: #e4d887;
+	background-size: cover;
+	background-blend-mode: multiply;
+}
+
+.backgrounds .services {
+	background-image: url();
+	background-image: url('../_images/webdesign1.jpg');
+	background-color: #4d883d;
+	background-size: cover;
+	background-blend-mode: multiply;
+}
+
+.backgrounds .hireMe {
+	background-blend-mode: multiply;
+	background-image: url();
+	background-image: url('../_images/bg.jpg');
+	background-color: #09524e;
+	background-size: cover;
+	
+}
+
+.backgrounds div.active {
+	opacity: 1;
+}
+

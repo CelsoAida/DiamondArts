@@ -1,3 +1,7 @@
+function print(msg) {
+	console.log(msg)
+}
+
 // chec if a class is present
 function HasClass(elem, clsname) {
 	this.elem = elem
@@ -24,7 +28,7 @@ function AddEvnt(elem, evt, callback) {
 	else
 		this.elem = elem
 
-	
+
 	this.evt = evt
 	this.call = callback
 
@@ -74,7 +78,7 @@ function CreateAndAppend(child, parent, callback) {
 		// this allows css selectors in the parent parameter
 		this.parent = Select(parent);
 	} else if(!parent) {
-		console.log('error parent argument not defined')
+		print('error parent argument not defined')
 		return
 	} else {
 		// if argument passed to parent parameter is a DOM Element
@@ -84,7 +88,7 @@ function CreateAndAppend(child, parent, callback) {
 
 	this.parent.appendChild(this.child)
 
-	// callback function allows for you to manipulate the 
+	// callback function allows for you to manipulate the
 	// the element that was created
 	callback(this.child)
 }
@@ -96,7 +100,7 @@ function Clas(elem, type, classname) {
 	if(typeof(elem) === 'string')
 		this.elem = Select(elem);
 	else if(!elem)
-		console.log('Error: can\'t read element')
+		print('Error: can\'t read element')
 	else
 		this.elem = elem
 
@@ -108,5 +112,15 @@ function Clas(elem, type, classname) {
 	else if(this.type === 'toggle')
 		this.elem.classList.toggle(this.name)
 	else
-		console.log('type error: classList method undefined')
+	print('type error: classList method undefined')
+}
+
+function GetRandomInt(min, max) {
+	let random = Math.floor(Math.random() * (max-min+1) + min)
+	return random
+}
+
+function GetRandom(min, max) {
+	let random = Math.random() * (max-min+1) + min
+	return random
 }

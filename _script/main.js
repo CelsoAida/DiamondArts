@@ -40,11 +40,14 @@ function wlmsg(){
 				if(count === inf.length) {
 					clearInterval(init)
 					CreateAndAppend('p', msg, e=>{
-						e.innerHTML = ' - Prince Donkor'
+						e.innerHTML = 'View my work'
 						Clas(e, 'add', 'name')
+						AddEvnt(e, 'click', ()=>{
+							location.hash = 'portfolio'
+						})
 					})
 				}
-			}, 30)	
+			}, 25)
 		})
 };
 
@@ -55,11 +58,12 @@ AddEvnt(window, 'load', function(e){
 	}
 	HashSignal()
 	about()
-	aboutSpanAnim();
-	menu();
-	wlmsg();
+	aboutSpanAnim()
+	menu()
+	wlmsg()
 	skilClick()
 	skillsOnLoad()
+	navColorChange(location.hash)
 })
 
 
@@ -76,7 +80,9 @@ function HashSignal() {
 			pages[i].classList.remove('show')
 		}
 	}
+
 	activeClass(initHash)
+	navColorChange(initHash)
 }
 
 
@@ -92,7 +98,7 @@ function activeClass(framentID) {
 		} else {
 			active[i].classList.remove('active')
 		}
-	}	
+	}
 }
 
 AddEvnt(buttons[0], 'click', ()=>{
@@ -159,14 +165,14 @@ function aboutSpanAnim() {
 function skillsOnLoad() {
 	var skill = info.skills,
 		div = Select('.skill_info p'),
-		rate = Select('.usage_thumb')	
+		rate = Select('.usage_thumb')
 
 		div.innerHTML = 'Skill: ' + skill[0].name + '<br \
 		/>' + 'Version: ' + skill[0].version + '<br />'
 		setTimeout(function(){
 			rate.style.width = skill[0].percent;
 		}, 1000)
-		
+
 }
 
 
@@ -190,3 +196,146 @@ function skilClick() {
 			})
 		}
 }
+
+(function(){
+	var div = Select('.folio-holder div', true),
+		len = div.length;
+
+	for(var i=0; i<len; i++) {
+
+		AddEvnt(div[i], 'mouseenter', function(){
+			Clas(this, 'add', 'active')
+		})
+
+		AddEvnt(div[i], 'mouseleave', function(){
+			Clas(this, 'remove', 'active')
+		})
+	}
+})();
+
+// change menu font color for some pages if text is not visible
+function navColorChange(id) {
+	var id = location.hash.substr(1),
+		elem = Select('.icons ul');
+		cls = 'color-change'
+
+	if(id === 'portfolio' || id === 'services')
+		elem.classList.add(cls)
+	else
+		elem.classList.remove(cls)
+}
+
+
+function serviceAnim() {
+	var div = Select('.services .container .holder > div', true)
+		len = div.length;
+
+		for(var i=0; i<len; i++) {
+			AddEvnt(div[i], 'mouseenter', function(){
+				Clas(this, 'add', 'active')
+			})
+
+			AddEvnt(div[i], 'mouseleave', function(){
+				Clas(this, 'remove', 'active')
+			})
+		}
+}
+
+serviceAnim()
+
+// leave a msg inputs animation
+function inputAnim() {
+	let leaveMsg = Select('.leaveMsg form'),
+		cont = new HasClass(Select('.hireMe'), 'show'),
+		h1 = Select('.leaveMsg h1'),
+		cls  = 'marginRemove'
+
+
+		leaveMsg = leaveMsg.childNodes
+
+		h1.classList.add(cls)
+
+		for(var i=0, len=leaveMsg.length; i<len; i++) {
+			if(i%2 === 0) {
+					continue
+			}
+
+			leaveMsg[i].classList.add(cls)
+		}
+
+		if(cont) {
+			setTimeout(()=>{
+				for(var i=0, len=leaveMsg.length; i<len; i++) {
+					if(i%2 === 0) {
+						continue
+					}
+
+					var dur = GetRandom(1, 2),
+						delay = Math.random() * 1;
+
+					leaveMsg[i].style.webkitTransition = `all ${dur}s ${delay}s ease-in-out`;
+					leaveMsg[i].style.mozTransition = `all ${dur}s ${delay}s ease-in-out`;
+					leaveMsg[i].style.transition = `all ${dur}s ${delay}s ease-in-out`;
+					leaveMsg[i].classList.remove(cls)
+				}
+				let dura = GetRandom(1,2),
+						 delays = GetRandom(0, 1)
+				h1.style.webkitTransition = `all ${dur}s ${delays}s ease-in-out`
+				h1.style.mozTransition = `all ${dur}s ${delays}s ease-in-out`
+				h1.style.transition = `all ${dur}s ${delays}s ease-in-out`
+				h1.classList.remove(cls)
+			}, 300)
+		}
+}
+
+// hire me input animation
+function hireMeAnim() {
+	let mkRequest = Select('.makeRequest form'),
+			 mkReqChild = mkRequest.childNodes,
+			 cont = new HasClass(Select('.hireMe'), 'show'),
+			 h1 = Select('.makeRequest h1'),
+			 cls = 'marginRemove'
+
+			 h1.classList.add(cls)
+
+			 for(var i=0, len=mkReqChild.length; i<len; i++) {
+	 			if(i%2 === 0) {
+	 					continue
+	 			}
+
+	 			mkReqChild[i].classList.add(cls)
+	 		}
+
+			if(cont) {
+				setTimeout(()=>{
+					for(var i=0, len=mkReqChild.length; i<len; i++) {
+						if(i%2 === 0) {
+							continue
+						}
+
+						var dur = GetRandom(1, 2),
+							delay = Math.random() * 1;
+
+						mkReqChild[i].style.webkitTransition = `all ${dur}s ${delay}s ease-in-out`;
+						mkReqChild[i].style.mozTransition = `all ${dur}s ${delay}s ease-in-out`;
+						mkReqChild[i].style.transition = `all ${dur}s ${delay}s ease-in-out`;
+						mkReqChild[i].classList.remove(cls)
+					}
+					let dura = GetRandom(1,2),
+							 delays = GetRandom(0, 1)
+					h1.style.webkitTransition = `all ${dur}s ${delays}s ease-in-out`
+					h1.style.mozTransition = `all ${dur}s ${delays}s ease-in-out`
+					h1.style.transition = `all ${dur}s ${delays}s ease-in-out`
+					h1.classList.remove(cls)
+				}, 300)
+			}
+
+}
+
+inputAnim()
+hireMeAnim()
+
+AddEvnt(buttons[4], 'click', ()=>{
+	inputAnim()
+	hireMeAnim()
+})
